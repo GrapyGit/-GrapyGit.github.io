@@ -5,7 +5,7 @@
     <title>Slum Magic</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-	
+	<script src="script/script.js"></script>
     <style>
 	@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
@@ -105,13 +105,18 @@ background-repeat: no-repeat;
 <div id="menu"></div>
 <canvas id="myCanvas"></canvas>
 <div id ="menun">
+<p class="menu" id ="menu8" onclick="men(8)">Продолжить</p>
+<p class="menu" id ="menu7" onclick="men(7)">Новая игра</p>
 <p class="menu" id="menu1" onclick="men(1)">Выбор режима игры</p>
 <p class="menu" id="menu2" onclick="men(2)">Справочник по космосу</p>
 <p class="menu" id="menu3" onclick="men(3)">Помощь</p>
-<p class="menu" id="menu4" style="display: none;" onclick="men(4)">Компания</p>
+<p class="menu" id="menu4" style="display: none;" onclick="men(4)">Тренировка</p>
 <p class="menu" id="menu5" style="display: none;" onclick="men(5)">Кооператив</p>
 <p class="menu" id="menu6" style="display: none;" onclick="men(6)">Назад</p>
 <script>
+	if (localStorage["Level"] == 0){
+		document.getElementById("menu8").style.display = "none"
+	}
 	function men(a)
 	{
 		console.log(a)
@@ -120,7 +125,9 @@ background-repeat: no-repeat;
 			case 1:
 				document.getElementById("menu1").style.display = "none"
 				document.getElementById("menu2").style.display = "none"
+				document.getElementById("menu7").style.display = "none"
 				document.getElementById("menu3").style.display = "none"
+				document.getElementById("menu8").style.display = "none"
 				document.getElementById("menu4").style.display = "block"
 				document.getElementById("menu5").style.display = "block"
 				document.getElementById("menu6").style.display = "block"
@@ -136,6 +143,11 @@ background-repeat: no-repeat;
 			case 5:
 				break;
 			case 6:
+			if (localStorage["Level"] == 0){
+		document.getElementById("menu8").style.display = "none"
+	}
+			//document.getElementById("menu8").style.display = "block"
+			document.getElementById("menu7").style.display = "block"
 			document.getElementById("menu1").style.display = "block"
 				document.getElementById("menu2").style.display = "block"
 				document.getElementById("menu3").style.display = "block"
@@ -143,9 +155,19 @@ background-repeat: no-repeat;
 				document.getElementById("menu5").style.display = "none"
 				document.getElementById("menu6").style.display = "none"
 				break;
+				case 7:
+				NewGame();
+				
+
+				window.location = "start.html";
+				break;
+				case 8:
+				window.location = "game.html";	
+				break;
 		}
 		// window.location = "info.html";
 	}
+
 	</script>
 </div>
 </body>
