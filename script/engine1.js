@@ -255,7 +255,7 @@ class bullet {
 			dopopadaniya++
 			this.dx = 0.0;
 			this.dy = 0.0;
-			document.getElementById("rr").innerHTML="ви попали " + popadanie+ "<br>В вас попали "+dopopadaniya
+			document.getElementById("rr").innerHTML="ви попали " + kill+ "<br>В вас попали "+dopopadaniya
 		}
 	}
 	}
