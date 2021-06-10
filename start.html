@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+<title>Предысловие</title>
+<script>
+setTimeout(function(){ window.location = "game.html"; }, 101000);
+</script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+#lol{
+opacity: 0;
+animation : lol 100s ;
+}
+
+
+
+#intro {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);    
+    text-align: center;
+    color: rgb(75, 213, 238);
+    font-size: 200%;
+    animation: intro 100s ease-out ;
+	
+}
+#logo {
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    height: 50%;
+    top: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+  animation: logo 100s ease-out ; 
+}
+#scroller {
+    position: absolute;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    height: 100%;
+    font-size: 250%;
+    text-align: justify;    
+    color: #ff6;
+    transform: perspective(200px) rotateX(30deg);
+}
+
+#scroller div {
+    position: absolute;
+  top: 100%;
+    animation: scroller 100s linear ;
+}
+#scroller p { 
+  margin: 1.35em 0 1.85em 0;
+  line-height: 1.35em;  
+}
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;   
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font: 700 1em "News Cycle", sans-serif;
+    letter-spacing:.15em;
+}
+/* ANIMATIONS */
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+  1% {
+    opacity: 1;
+  }  
+    1.5% { 
+    opacity: 1; 
+  }
+    5.5% { 
+    opacity: 1; 
+  }
+    6% { 
+    opacity: 0;
+  } 
+}
+@keyframes logo {
+    9% {
+    transform: translateX(-50%) translateY(-50%) scale(2);
+    opacity: 0; 
+  }
+  9.1% {
+    opacity: 1;
+  }
+    14% { 
+    opacity: 1; 
+  }
+    18% { 
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    opacity: 0;
+  } 
+}
+@keyframes scroller {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    7% {
+        top: 100%;
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        top: -250%;
+        opacity: 0;
+    }
+}
+
+@keyframes lol{
+ 15% {opacity:0;}
+ 25% {opacity: 1;}
+ 100% {opacity: 1;}
+}
+/* IMAGES */
+#logo {
+    background-image:  url(img/logo.png); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center; 
+}
+body {
+    background-image: url(img/zast.jpg) ;
+	 background-size: cover;
+    background-color:black;
+}
+</style>
+
+</head>
+  <body>
+    <div id="intro"> Ничего не изменить,<br> остаётся лишь присмыкаться...</div>
+    <div id="logo"></div>
+    <div id="scroller">
+        <div>
+          <p>
+            XXI век неквантовых компьютеров и искуственного интелекта. НЕТ!
+          </p>
+          <p>
+            В 2075 году, к которому предшествовало много научных и технических открытий, человечество впало в ступор.
+          </p>
+          <p>
+            Человеческие ценности: семья, вера, любовь больше ничего не значат.
+          </p>
+		    <p>
+            Нехватка природных ресурсов и переизбыток человеческого ресурса повлекло за собой нищету, экономический упадок, тотальный кризис.
+          </p>
+		   <p>
+            Грабежи, разбойные нападения могли бы стать обыденностью, но не у кого красть, ничего нет.
+          </p>
+		   <p>
+            Авантюристы, коих осталось так мало, решили искать ресурсы на проживание в далёких галактиках.
+          </p>
+		  <p>
+            Но и по ту сторону клювом не щёлкают.
+          </p>
+      </div>
+    </div>
+	 <p id ="lol" style = "position:fixed; right:20px; top:85%;"><a style="color: yellow; font-size: 30px; text-decoration: none;" href="game.html">Skip <img src = "img/pere.png" style="width: 30px; border: none;"></img></a></p>
+  </body>
+</html>  
