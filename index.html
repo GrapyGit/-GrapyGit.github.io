@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-   <title>Cosmic Hopelessness</title>
+    <title>Slum Magic</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
 	<script src="script/script.js"></script>
@@ -121,7 +121,6 @@ background-repeat: no-repeat;
 	{
 		console.log(a)
 		switch(a){
-			
 			case 1:
 				document.getElementById("menu1").style.display = "none"
 				document.getElementById("menu2").style.display = "none"
@@ -143,8 +142,9 @@ background-repeat: no-repeat;
 			case 5:
 				break;
 			case 6:
-			if (localStorage["Level"] == 0){
-		document.getElementById("menu8").style.display = "none"
+
+			if (localStorage["Level"] != 0){
+		document.getElementById("menu8").style.display = "block"
 	}
 			//document.getElementById("menu8").style.display = "block"
 			document.getElementById("menu7").style.display = "block"
@@ -165,9 +165,7 @@ background-repeat: no-repeat;
 				window.location = "game.html";	
 				break;
 		}
-		// window.location = "info.html";
 	}
-
 	</script>
 </div>
 </body>
