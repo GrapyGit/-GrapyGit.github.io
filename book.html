@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-   <title>Cosmic Hopelessness</title>
+    <title>Slum Magic</title>
     <style>
 
  body {
@@ -92,15 +92,17 @@
 	   
 <div style="clear: left; padding-top: 30px; padding-bottom: 10px;  overflow: hidden;">
 	<div class="block" onclick="slaid(-1)"></div>
-	<p id="in" onclick="lol()" >Вернуться в меню</p>
+	<p id="in" onclick='window.location = "index.html"' >Вернуться в меню</p>
 	<div class="block1" onclick="slaid(1)"></div>
 </div>
 </div>
 
 	   <script>
-		   function lol(){
-			window.location = "https://grapygit.github.io/Game"
+		   if (localStorage["book"]==null){
+			   alert("у вас нет доступной информации начните игру :) Удачи!")
+			   window.location ="index.html"
 		   }
+		   console.log(localStorage)
 		   var nomer = 0
 		   try{
 			let params = new URLSearchParams(document.location.search.substring(1));
@@ -142,9 +144,9 @@ catch(e){
 function slaid(i){
 	nomer = nomer+i
 	if (nomer == -1) {
-		nomer=book.length -1
+		nomer= Number(localStorage["book"]) -1
 	}
-	else if (nomer == book.length){
+	else if (nomer == Number(localStorage["book"])){
 		nomer = 0
 	}
 	Update(nomer)
