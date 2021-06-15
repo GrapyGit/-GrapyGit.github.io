@@ -138,7 +138,7 @@ class help{
 				document.getElementById("b").innerHTML =": " + hero.ammunition
 				   break;
 			   case "img/life.png":
-                 if (hero.lives < hero.maxLives)  hero.lives = hero.lives + getRandomInt(hero.maxLives - hero.lives);
+                 if (hero.lives < hero.maxLives)  hero.lives = hero.lives + getRandomInt(hero.maxLives - hero.lives)+1;
 					break;
 		   }
 			  clearTimeout(this.timer)
