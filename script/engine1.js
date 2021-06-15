@@ -565,13 +565,15 @@ function GameStart(){
 			if (enemies[i].kill){
 				enemies[i].tick()
 				if (collision(enemies[i].x+(enemies[i].w/2),enemies[i].y+(enemies[i].h/2),enemies[i].w/2,hero.x+50,hero.y+70,50))
-				{
+				{	if (enemies[i].p != 5){
 					musicArray.push(new music("music/explosion.mp3",1900,0.10,false))
 					musicArray[musicArray.length-1].play()
 				   clearInterval(enemies[i].timer)
 				   enemies[i].src = "img/vz.png"
 				   enemies[i].kill = false
 				   hero.hit(hero.maxArmor)
+				} else  hero.hit(11)
+					
 				}
 				else draw(enemies[i].x,enemies[i].y,enemies[i].w,enemies[i].h,enemies[i].angle,enemies[i].src)
 			}
