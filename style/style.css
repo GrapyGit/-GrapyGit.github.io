@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body {
+
+    cursor:  crosshair;
+    cursor: url(../img/pricel.png) 0 0, crosshair;
     -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
   -khtml-user-select: none;    /* Konqueror */
@@ -12,6 +15,7 @@ overflow:hidden;
 background-color: black;
 margin:0;
 }
+
 .lol{
     position: fixed;
     top: 0px;
@@ -118,4 +122,17 @@ left:10%;
     opacity: 0.8;
     border-radius: 10px;
     padding: 10px;
+}
+#lol{
+    position:fixed; 
+    right:20px; top:85%; 
+    color: blue;
+     font-size: 30px;
+}
+#plus:hover{
+  cursor: auto;
+}
+
+#set:hover{
+    cursor: auto;
 }
