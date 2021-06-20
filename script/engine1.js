@@ -394,7 +394,7 @@ function Leveles()
 		break;
 		case 4:
 			hero.ammunition = 200;
-			duration = 1000
+			duration = 2000
 			initializationEnemie = [5];
 		break;
 	}
