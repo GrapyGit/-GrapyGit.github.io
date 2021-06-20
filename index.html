@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	
+    <title>Cosmic Hopelessness</title>
+	<link rel="shortcut icon" href="img/i.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+	<script src="script/script.js"></script>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+	body {
+		cursor:  crosshair;
+    cursor: url(cursor2.png) 0 0, crosshair;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	margin:0;
+	}
+	#zagolovok {
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 40px;
+	color: rgb(255, 255, 0);
+	margin: 0;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	}
+	#menu{
+position: fixed;
+top: 0px;
+left: 10%;
+background: linear-gradient(-45deg, transparent 56px, rgb(226, 75, 145) 0) right, linear-gradient(45deg, transparent 56px, rgb(240, 81, 81) 0) left;
+background-size: 50% 100%;
+background-repeat: no-repeat;
+	width: 80%;
+	
+	}
+ #myCanvas{
+ display:block;
+ position: absolute;
+  width: 80%;
+  height: 100%;
+  left:10%;
+ }
+ #fo{
+	background: url('img/menu.jpg') no-repeat;
+	background-size: 100%;
+	
+ }
+ .lol{
+    position: fixed;
+    top: 0px;
+    width: 80%;
+    left:10%;
+    overflow:hidden;
+    height: 100%;
+}
+#menun{
+	position: fixed;
+    right: 20%;
+	bottom: 20%;
+    overflow:hidden;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.menu {
+	font-size: 40px;
+    font-family: 'Pattaya', sans-serif;
+	color: #dc143c;
+   
+}
+ p.menu:hover{
+	animation: blur .75s ease-out infinite;
+	text-shadow: 0px 0px 5px #dc143c, 0px 0px 7px #dc143c;
+}
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #dc143c,
+      0px 0px 10px #dc143c, 
+      0px 0px 25px #dc143c,
+      0px 0px 25px #dc143c,
+      0px 0px 25px #dc143c,
+      0px 0px 25px #dc143c,
+      0px 0px 25px #dc143c,
+      0px 0px 25px #dc143c,
+      0px 0px 50px #dc143c,
+      0px 0px 50px #dc143c,
+      0px 0px 50px #9b0f2b,
+      0px 0px 150px #9b0f2b,
+      0px 10px 100px #9b0f2b,
+      0px 10px 100px #9b0f2b,
+      0px 10px 100px #9b0f2b,
+      0px 10px 100px #9b0f2b,
+      0px -10px 100px #9b0f2b,
+      0px -10px 100px #9b0f2b;
+  }
+}
+    </style>
+
+</head>
+<body>
+
+<img class="lol" src="img/menu.jpg"></div>
+<div id="menu"></div>
+<canvas id="myCanvas"></canvas>
+<div id ="menun">
+<p class="menu" id ="menu8" onclick="men(8)">Продолжить</p>
+<p class="menu" id ="menu7" onclick="men(7)">Новая игра</p>
+<p class="menu" id="menu1" onclick="men(1)">Выбор режима игры</p>
+<p class="menu" id="menu2" onclick="men(2)">Справочник по космосу</p>
+<p class="menu" id="menu3" onclick="men(3)">Помощь</p>
+<p class="menu" id="menu4" style="display: none;" onclick="men(4)">Тренировка</p>
+<p class="menu" id="menu5" style="display: none;" onclick="men(5)">Кооператив</p>
+<p class="menu" id="menu6" style="display: none;" onclick="men(6)">Назад</p>
+<script src="script/script.js"></script>
+<script>
+ClearStorage()
+	if (localStorage["Level"] == 0 || localStorage["Level"]==null){
+		document.getElementById("menu8").style.display = "none"
+	}
+	function men(a)
+	{
+		console.log(a)
+		switch(a){
+			case 1:
+				document.getElementById("menu1").style.display = "none"
+				document.getElementById("menu2").style.display = "none"
+				document.getElementById("menu7").style.display = "none"
+				document.getElementById("menu3").style.display = "none"
+				document.getElementById("menu8").style.display = "none"
+				document.getElementById("menu4").style.display = "block"
+				document.getElementById("menu5").style.display = "block"
+				document.getElementById("menu6").style.display = "block"
+				break;
+			case 2:
+			window.location = "book.html";
+				break;
+			case 3:
+			window.location = "info.html";
+				break;
+			case 4:
+			window.location = "workout.html";
+				break;
+			case 5:
+				break;
+			case 6:
+
+			if (localStorage["Level"] != 0){
+		document.getElementById("menu8").style.display = "block"
+	}
+			document.getElementById("menu7").style.display = "block"
+			document.getElementById("menu1").style.display = "block"
+				document.getElementById("menu2").style.display = "block"
+				document.getElementById("menu3").style.display = "block"
+				document.getElementById("menu4").style.display = "none"
+				document.getElementById("menu5").style.display = "none"
+				document.getElementById("menu6").style.display = "none"
+				break;
+				case 7:
+				ClearStorage()	
+				NewGame()
+				window.location = "start.html";
+				break;
+				case 8:
+				ClearStorage()	
+				window.location = "game.html";	
+				break;
+		}
+	}
+	</script>
+</div>
+</body>
+</html>
+
+

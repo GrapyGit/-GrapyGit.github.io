@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+<title>Титры</title>
+<link rel="shortcut icon" href="img/i.png" type="image/png">
+<style>
+html,body{
+height: 100%;
+overflow:hidden;
+}
+img { pointer-events: none; }
+body{
+    -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;   
+margin: 0;
+width: 100%;
+background-color:black;
+}
+div{
+position: absolute;
+top:100%;
+left: 30%;
+ line-height: 1.5;
+width: 40%;
+color: white;
+margin: 0;
+font-size: 30px;
+animation: titry 20s linear;
+}
+#lol{
+color: #DC37B8;
+padding-left: 20%;
+}
+@keyframes titry{
+ 0% {top: 100%;}
+ 50% {top: 0%;}
+ 100% {top: -100%}
+}
+#LL{
+	opacity: 0;
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    height: 50%;
+    top: 25%;
+	animation: lol 30s linear;
+}
+@keyframes lol{
+ 0% {opacity: 0}
+ 70% {opacity: 0}
+ 90% {opacity: 1}
+ 100% {opacity: 1}
+}
+</style>
+</head>
+<body>
+<div>
+Разработчик: GrapY<br>
+Разработчик по ФИО:<br>
+Яшанов Григорий Павлович<br>
+Дизайнер обьектов: MillionthVector<br>
+Дизайнер фона: GrapY<br>
+Саунд дизайнер: Noobish Spaceman<br> 
+P.S. Люблю его :)<br>
+Издатель: не нужен хотя...<br>
+<p id = "lol">Интересные факты:</p>
+ -Программа написана на JavaScript,<br>
+без использованния библиотек<br>
+ -Игра являеться дипломным проектом<br>
+ -Первым кто её тестил, был GrapY<br>
+ -Вторым его котик Noobish Spaceman<br>
+ -Игра являеться данью уважения<br> 
+разработчикам "spacewar!"<br>
+</div>
+<img src="img/logo.png" id="LL">
+</img>
+<script>
+   var audio = new Audio("music/titri.mp3")
+  audio.volume = 0.05
+  audio.play()
+setTimeout(() => window.location = "index.html",30000);
+</script>
+</body>
+</html>

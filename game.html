@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cosmic Hopelessness</title>
+    <link rel="shortcut icon" href="img/i.png" type="image/png">
+	<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+<div id = "animation">
+<div id = "fo" class="lol"></div>
+<div id ="fo1" class="lol"></div>
+</div>
+<canvas id="myCanvas"></canvas>
+<div id ="menu">
+<div id="set" style=" position:absolute;margin-left: 6%;margin-top: 1%;">
+<img id="exit" style="display: inline; width: 40px;" src = "img/exit.png" onclick='window.location = "index.html"'></img>
+<img id="full" style=" display: inline; width: 40px; padding-left:40px;" src = "img/full.png" onclick="FullScrean()"></img>
+</div>
+<h1 id="zagolovok">Cosmic Hopelessness</h1>
+</div>
+<h2 style="color:cyan;  position: absolute; bottom: 1%; -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;    right: 2%" id="r"></h2>
+<table id="opt">
+   
+        <td>
+            <img src="img/money.png" class="icon"></img>
+        </td>
+        <td>
+            <h2 style="color:cyan; " id="money">: 0 </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="img/xp.png" class="icon"></img>
+        </td>
+        <td>
+            <h2 style="color:cyan; " id="ochko" >: 0 </h2>
+        </td>
+    </tr>
+    <tr>
+    <tr>
+        <td>
+            <img src="img/b.png" class="icon"></img>
+        </td>
+        <td>
+            <h2 style="color:cyan; " id="b">: 0 </h2>
+        </td>
+    </tr>
+</table>
+
+<table id="plus">
+    
+    <tr colspan="3"><td style="text-align: center;"><p>Апгрейд</p></td></tr>
+<tr>
+    <td><p>Обшивка: </p></td>
+    <td ><p id="lives">1</p></td>
+    <td ><p onclick="upgrade(1)">+</p></td>
+</tr>
+<tr>
+    <td><p>Щит: </p></td>
+    <td><p  id="armor">1</p></td>
+    <td ><p onclick="upgrade(2)">+</p></td>
+</tr>
+<tr>
+<tr>
+    <td><p >Скорость: </p></td>
+    <td ><p id ="speed">10</p></td>
+    <td ><p onclick="upgrade(3)">+</p></td>
+</tr>
+<tr>
+    <td><p>Лазер: </p></td>
+    <td ><p id="power">1</p></td>
+    <td ><p onclick="upgrade(4)">+</p></td>
+</tr>
+</table>
+
+
+
+<table id ="dead" Style="color:white ; text-align: center;">
+    <tr class="dead">
+        <td colspan="2">
+        <h1 >Вы ничего не добились</h1>
+        </td>
+    </tr>
+    <tr class="dead" colspan="2">
+        <td>
+            <p  onclick="window.location.reload()">Заново</p>
+        </td>
+        <td>
+            <p  onclick='window.location="index.html"'>В меню</p>
+        </td>
+    </tr>
+</table>
+<div id="history" style = "display:none; position: fixed; background-color: blue; opacity: 0.8; height: 20%; width: 80%; bottom: 0px; left:10%;  border: 6px solid #090974; border-radius: 25px;">
+    <p style = "display: block; color:#090974; font-size: 50px; margin: 0px;  margin-left: 6%; margin-top: 10px;" id="nike">Nike</p>
+    <p style ="display:block; font-size: 40px; color:#996AD6; margin:0; margin-left: 10%; margin-top: 25px;" id ="text">text</p>
+</div>
+<p id ="lol"  onclick="propusk(2)"  >Skip <img src = "img/pere1.png" style="width: 30px; border: none;"></img></p>
+<script src="script/img.js"></script>
+<script src="script/dialog.js"></script>
+<script src="script/music.js"></script>
+<script src="script/script.js"></script>
+<script src="script/engine1.js"></script>
+</body>
+</html>
