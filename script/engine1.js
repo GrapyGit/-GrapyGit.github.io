@@ -283,7 +283,7 @@ class bullet {
 		if (this.whose){
 			for (var i=0; i<enemies.length; i++){
 			if (enemies[i].kill){
-		if (isCollided(enemies[i].x+enemies[i].w/2,enemies[i].y+enemies[i].h/2,this.x, this.y,enemies[i].w/2)){
+			if (collision(enemies[i].x+enemies[i].w/2,enemies[i].y+enemies[i].h/2,enemies[i].w/2,this.x, this.y,0)){
 			enemies[i].l = enemies[i].l - this.p
 			musicArray.push(new music("music/pop.wav",800,0.01,false))
 			musicArray[musicArray.length-1].play()
@@ -310,7 +310,7 @@ class bullet {
 		}
 	}
 		else{
-			if (isCollided(hero.x+50,hero.y+70,this.x, this.y,50)){
+			if (collision(hero.x+50,hero.y+70,50,this.x, this.y,0)){
 			musicArray.push(new music("music/pop.wav",800,0.01,false))
 			musicArray[musicArray.length-1].play()
             hero.hit(this.p)
@@ -408,11 +408,6 @@ function deleat(i){
 }
 
 
-function isCollided(dx,dy,x,y,r)
-{
-	  var d = Math.sqrt((dx - x)*(dx - x) + (dy - y)*(dy - y))
-	  return d<=r
-}
 
 function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max));
