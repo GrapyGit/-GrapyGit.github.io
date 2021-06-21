@@ -231,7 +231,7 @@ class enemie{
 			this.ax = getRandomInt(canvas.width - 140);
 			this.ay = getRandomInt(canvas.height - 100);
 		}
-		this.angle =Math.atan2((hero.x+50) - (this.x+this.w/2),-(((hero.y+70)-(this.y + this.h/2))))*(180/Math.PI)
+		this.angle =Math.atan2((hero.x+50) - (this.x+this.w/2),-(((hero.y+70)-(this.y + this.h/2))))
 	}
 	fire(){
         var x = (hero.x+50) - (this.x+50)
@@ -407,8 +407,6 @@ function deleat(i){
     enemies.splice(i,1)
 }
 
-
-
 function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max));
 }		
@@ -583,7 +581,7 @@ function NextLevel(){
 function GameStart(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height)
 	if (kill != initializationEnemie.length && hero.lives > 0){
-	hero.angle = Math.atan2(mouseX - (hero.x+100/2),-(mouseY- (hero.y+140/2)))*(180/Math.PI)
+	hero.angle = Math.atan2(mouseX - (hero.x+100/2),-(mouseY- (hero.y+140/2)))
 	draw(hero.x,hero.y,100,140,hero.angle,hero.img)
 		for (var i=0; i<enemies.length; i++){
 			if (enemies[i].kill){
