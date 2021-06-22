@@ -454,7 +454,7 @@ function drawInfo() {
 function draw(x,y,w,h,a,img,x1,y1){//анимация смерти
 var dx = x + w/2
 	var dy = y + h/2
-	a=a*(Math.PI/180)
+	
 	if (a){
 		ctx.save()
 		ctx.translate(dx,dy)
